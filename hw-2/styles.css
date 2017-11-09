@@ -1,0 +1,84 @@
+#ricebook{
+    font-size: 400%;
+    text-align: center;
+    font-family: Arima Madurai;
+}
+#mainpage{
+    background-color:bisque;
+}
+#posts{
+    font-family: Handlee;
+    font-size: 25px;
+    text-align: center;
+    margin: 50px 15px;
+}
+.postinfo{
+    border: 20px solid;
+    border-color: antiquewhite;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius:15px;
+}
+.pic{
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+}
+.btn{
+    font-family: Fauna One;
+    font-size: 20px;
+    height: 70px;
+    width: 180px;
+    border-radius: 6px;
+	background: #FFCCCC;
+	display: inline-block;
+	padding: 5px 10px 6px;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border: 6px solid rgb(176,176,176);
+	position: relative;
+	cursor: pointer
+}
+#gotofilepage{
+    margin: 0 auto;
+    font-family: cursive;
+    font-size: 20px;
+    height: 80px;
+    width: 200px;
+    border-radius: 10px;
+	background: #0099FF;
+	display: block;
+	padding: 5px 10px 6px;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border: 6px solid rgb(176,176,176);
+	position: relative;
+	cursor: pointer
+}
+#profilepage{
+    background-color: #FFFFCC;
+    text-align: center;
+    font-family: Parisienne;
+    font-weight: bold;
+    font-size: 20px;
+}
+#personal-info{
+    font-family: Pinyon Script;
+}
+#changedinfo{
+    width: 800px;
+    border: 2px solid azure;
+    margin: 20px auto;
+    font-family: cursive;
+}
+.typein{
+    background-color: blanchedalmond;
+    border-radius: 6px;
+    width:160px;
+    height: 24px;
+}

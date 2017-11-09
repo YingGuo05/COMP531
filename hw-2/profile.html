@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Ying Guo">
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Parisienne|Pinyon+Script" rel="stylesheet">
+        <title>Profile Page</title>
+    </head>
+    <body id="profilepage">
+        <h1 id="personal-info">Personal Information</h1>
+        <div id="info">
+            <p> Display Name: <span id="displayName"></span></p>
+            <input class="typein" type="text" id="displayname"/>		
+            <p> Email Address: <span id="emailAddress"></span></p>
+            <input class="typein" type="text" id="email"/>
+            <p> Phone Number: <span id="phoneNumber"></span></p>
+            <input class="typein" type="text" id="phone"/>
+            <p> Zipcode: <span id="zipCode"></span></p>
+            <input class="typein" type="text" id="zipcode"/>
+            <p> Password: <span id="passWord"></span></p>
+            <input class="typein" type="password" id="password"/>
+            <p> Password Confirmation: <span id="passWordConfirm"></span></p>
+            <input class="typein" type="password" id="passwordConfirm"/>
+            <br>
+            <br>
+        <div id="changedinfo">
+            <span id="Name"></span>
+            <span id="Email"></span>
+            <span id="Phone"></span>
+            <span id="Zipcode"></span>
+            <span id="Password"></span>
+        </div>
+        <input class="btn" type="button" value="Submit" onclick="update()">
+        <input class="btn" type="button" value="Go To Main Page" onclick="redirect()">
+        </div>
+        <script type="text/javascript" src="profile.js"></script>
+    </body>
+</html>
