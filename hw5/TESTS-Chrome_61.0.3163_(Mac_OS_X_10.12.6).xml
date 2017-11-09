@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 61.0.3163 (Mac OS X 10.12.6)" package="" timestamp="2017-10-28T05:54:56" id="0" hostname="Yings-MacBook-Pro.local" tests="20" errors="0" failures="0" time="0.885">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"/>
+  </properties>
+  <testcase name="Test Actions resource should give me the http error" time="0.128" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).Test Actions"/>
+  <testcase name="Test Actions resource should be POSTable" time="0.012" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).Test Actions"/>
+  <testcase name="Test Actions resource should be a resource" time="0.003" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).Test Actions"/>
+  <testcase name="Test Actions should display error info to user" time="0.002" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).Test Actions"/>
+  <testcase name="Test Actions should display correct info to user" time="0.002" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).Test Actions"/>
+  <testcase name="Test Actions should navigate to other page" time="0.002" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).Test Actions"/>
+  <testcase name="AppComponent should create the app" time="0.07" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).AppComponent"/>
+  <testcase name="ArticleComponent should create article Service" time="0.105" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).ArticleComponent"/>
+  <testcase name="ArticleComponent should render articles" time="0.099" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).ArticleComponent"/>
+  <testcase name="ArticleComponent should dispatch actions to create new article" time="0.067" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).ArticleComponent"/>
+  <testcase name="Test article actions should fetch articles" time="0.008" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).Test article actions"/>
+  <testcase name="Test article actions should update the search keyword" time="0.003" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).Test article actions"/>
+  <testcase name="Test article actions should filter displayed articles by the search keyword" time="0.009" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).Test article actions"/>
+  <testcase name="AuthComponent should create" time="0.097" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).AuthComponent"/>
+  <testcase name="Test the log in and log out action should log the user in" time="0.015" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).Test the log in and log out action"/>
+  <testcase name="Test the log in and log out action should not log invalid user in" time="0.011" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).Test the log in and log out action"/>
+  <testcase name="Test the log in and log out action should log the user out" time="0.015" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).Test the log in and log out action"/>
+  <testcase name="ProfileComponent should create" time="0.076" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).ProfileComponent"/>
+  <testcase name="ProfileComponent should fetch the user profile information" time="0.074" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).ProfileComponent"/>
+  <testcase name="ProfileComponent should update headline" time="0.087" classname="Chrome_61_0_3163_(Mac_OS_X_10_12_6).ProfileComponent"/>
+  <system-out>
+    <![CDATA[Chrome 61.0.3163 (Mac OS X 10.12.6) LOG: TypeError{__zone_symbol__currentTask: ZoneTask{_zone: Zone{_properties: ..., _parent: ..., _name: ..., _zoneDelegate: ...}, runCount: 0, _zoneDelegates: null, _state: 'notScheduled', type: 'microTask', source: 'Promise.then', data: undefined, scheduleFn: undefined, cancelFn: null, callback: function () { ... }, invoke: function () { ... }}}
+,Chrome 61.0.3163 (Mac OS X 10.12.6) LOG: Object{method: 'POST', credentials: 'include', headers: Object{Content-Type: 'application/json'}, body: '{"username":"username","password":"password"}', url: 'https://webdev-dummy.herokuapp.com/login'}
+,Chrome 61.0.3163 (Mac OS X 10.12.6) LOG: Object{method: 'POST', credentials: 'include', headers: Object{Content-Type: 'application/json'}, body: '{"test":"test resource should be a resource"}', url: 'https://webdev-dummy.herokuapp.com/resource_test'}
+,Chrome 61.0.3163 (Mac OS X 10.12.6) LOG: Object{method: 'POST', credentials: 'include', headers: Object{Content-Type: 'application/json'}, body: '{"error":"error info"}', url: 'https://webdev-dummy.herokuapp.com/error'}
+,Chrome 61.0.3163 (Mac OS X 10.12.6) LOG: Object{method: 'POST', credentials: 'include', headers: Object{Content-Type: 'application/json'}, body: '{"correct":"correct info"}', url: 'https://webdev-dummy.herokuapp.com/correct'}
+,Chrome 61.0.3163 (Mac OS X 10.12.6) ERROR: 'Unhandled Promise rejection:', 'Cannot read property 'childNodes' of null', '; Zone:', 'ProxyZone', '; Task:', 'Promise.then', '; Value:', TypeError{__zone_symbol__currentTask: ZoneTask{_zone: Zone{_properties: ..., _parent: ..., _name: ..., _zoneDelegate: ...}, runCount: 0, _zoneDelegates: null, _state: 'notScheduled', type: 'microTask', source: 'Promise.then', data: undefined, scheduleFn: undefined, cancelFn: null, callback: function () { ... }, invoke: function () { ... }}}, 'TypeError: Cannot read property 'childNodes' of null
+    at http://localhost:9876/_karma_webpack_/webpack:/Users/yingguo/Desktop/531web/hw4/src/app/article/article.component.spec.ts:42:45
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/webpack:/Users/yingguo/Desktop/531web/hw4/node_modules/zone.js/dist/zone.js:392:1)
+    at ProxyZoneSpec.webpackJsonp.../../../../zone.js/dist/proxy.js.ProxyZoneSpec.onInvoke (http://localhost:9876/_karma_webpack_/webpack:/Users/yingguo/Desktop/531web/hw4/node_modules/zone.js/dist/proxy.js:79:1)
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/webpack:/Users/yingguo/Desktop/531web/hw4/node_modules/zone.js/dist/zone.js:391:1)
+    at Zone.webpackJsonp.../../../../zone.js/dist/zone.js.Zone.run (http://localhost:9876/_karma_webpack_/webpack:/Users/yingguo/Desktop/531web/hw4/node_modules/zone.js/dist/zone.js:142:1)
+    at http://localhost:9876/_karma_webpack_/webpack:/Users/yingguo/Desktop/531web/hw4/node_modules/zone.js/dist/zone.js:873:1
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invokeTask (http://localhost:9876/_karma_webpack_/webpack:/Users/yingguo/Desktop/531web/hw4/node_modules/zone.js/dist/zone.js:425:1)
+    at ProxyZoneSpec.webpackJsonp.../../../../zone.js/dist/proxy.js.ProxyZoneSpec.onInvokeTask (http://localhost:9876/_karma_webpack_/webpack:/Users/yingguo/Desktop/531web/hw4/node_modules/zone.js/dist/proxy.js:103:1)
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invokeTask (http://localhost:9876/_karma_webpack_/webpack:/Users/yingguo/Desktop/531web/hw4/node_modules/zone.js/dist/zone.js:424:1)
+    at Zone.webpackJsonp.../../../../zone.js/dist/zone.js.Zone.runTask (http://localhost:9876/_karma_webpack_/webpack:/Users/yingguo/Desktop/531web/hw4/node_modules/zone.js/dist/zone.js:192:1)'
+,Chrome 61.0.3163 (Mac OS X 10.12.6) LOG: Object{method: 'POST', credentials: 'include', headers: Object{Content-Type: 'application/json'}, body: '{"username":"yg45","password":"12345"}', url: 'https://webdev-dummy.herokuapp.com/login'}
+,Chrome 61.0.3163 (Mac OS X 10.12.6) LOG: Object{method: 'POST', credentials: 'include', headers: Object{Content-Type: 'application/json'}, body: '{"username":"wrong","password":"wrong"}', url: 'https://webdev-dummy.herokuapp.com/login'}
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

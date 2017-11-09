@@ -1,0 +1,7 @@
+{
+    "followers":[
+        {"name":"Lay","status":"Love Ying","img":"assets/images/pic3.jpg","display":true},
+        {"name":"Simon","status":"Love Lay","img":"assets/images/pic4.jpg","display":true},
+        {"name":"Sia","status":"Love Lay too much","img":"assets/images/pic5.jpg","display":true}
+    ]
+}

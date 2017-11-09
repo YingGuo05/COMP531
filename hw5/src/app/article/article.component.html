@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="centered">
+            <div class="col-md-4">
+                <br/>
+                <img src="assets/images/pic5.jpg" class="rounded" alt="http://img3.imgtn.bdimg.com/it/u=3490529943,881752914&fm=214&gp=0.jpg" width="300px" height="200px">
+                <h4>{{name}}</h4>
+                <h5>{{headline}}</h5>
+                <input type="text" placeholder="New Status" [(ngModel)]="status">
+                <button type="button" (click)="changeStatus()" class="btn btn-primary">Update</button>
+                <h1>Followers</h1>
+                <div *ngFor="let f of followers">
+                    <div class="followers">
+                        <h3 class="followers-text">
+                            <h4>{{f.name}}</h4>
+                        </h3>
+                        <img src="{{f.img}}" alt="#" width="230px" height="130px" class="followers">
+                        <h5 class="followers-text">
+                            <h5>{{f.name}}</h5>
+                        </h5>
+                        <button type="button" (click)="delete(f.name)" class="btn btn-primary unfollow">unfollow</button>
+                    </div>
+                </div>
+                <br/>
+                <input type="text" [(ngModel)] = "follower">
+                <button type="button" class = "btn btn-primary"  (click)="add()">Add New </button>
+                <h4>{{remind}}</h4>
+            </div>
+            <div class="col-md-8">
+                <h5>New Post!</h5>
+                <textarea placeholder="new post here" rows="10" cols="60" [(ngModel)]="newPost"></textarea>
+                <br/>
+                <input type="file" class="btn">
+                <button type="button" class = "btn btn-primary" (click)="clear()">Cancel</button>
+                <button type="button" class = "btn btn-primary" (click)="addPost()">Post</button>
+                <h1>Posts</h1>
+                <input type="text" placeholder="Search ..." class="form-control" (keyup)="filter($event)">
+                <br/>
+                <div *ngFor="let f1 of article" class="card">
+                    
+                    <div  class="post" *ngIf="f1.display">
+                        <div>
+                            <h3>{{f1.author}}</h3>
+                        </div>
+                        <img  src="{{f1.img}}" alt="" width="400px" height="230px">
+                        <div>
+                            <h5 id='test'>Text:</h5>
+                            <h5>{{f1.text}}</h5>
+                            <h4>{{f1.date}}</h4>
+                            <div id = "{{f1._id}}">
+                                <h4>Comments: </h4>
+                                <h4 *ngFor="let comment of f1.comments">{{comment}} </h4>
+                            </div>
+                        </div>
+                        <button type="button"  class="btn btn-primary">Edit</button>
+                        <button type="button"  class="btn btn-primary">Comment</button>
+                        <button type="button" (click)="toggle(f1._id)" class="btn btn-primary">{{btn}}</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+

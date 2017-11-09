@@ -1,0 +1,61 @@
+ <div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div id="reg">
+                <h2>Register</h2>
+                <form (ngSubmit)="onRegSubmit(register)" #register="ngForm" >
+                    <p>( * required )</p>
+                    <p> * Name: </p>
+                    <input [(ngModel)]="user_info.name" type="text" name="name" placeholder="Name" ngModel #name="ngModel" required pattern="^([a-zA-Z]{1})([a-zA-Z0-9])*$" class="form-control"/>
+                    <span class="remind-info" *ngIf="display_control.name">Input Name is not correct.</span>
+                    <p> * Email Address: </p>
+                    <input [(ngModel)]="user_info.email" type="text" name="email" placeholder="Email address" required ngModel pattern="^([a-zA-Z0-9\_\-\.])+@([a-zA-Z0-9\_\-])+((\.[a-zA-Z0-9]{2,4}){1,2})$" #email="ngModel" class="form-control"/>
+                    <span class="remind-info" *ngIf="display_control.email">Email is not correct.</span>
+                    <p> * Phone Number: </p>
+                    <input  [(ngModel)]="user_info.phone" type="text" name="phone" placeholder="123-123-1234" required ngModel pattern="^\(?([0-9]{3})\)?[-]?([0-9]{3})[-]?([0-9]{4})$" #phone="ngModel" class="form-control"/>
+                    <span class="remind-info" *ngIf="display_control.phone">Phone Number is not correct.</span>
+                    <p> * Data of Birth: </p>
+                    <input  [(ngModel)]="user_info.birth" type="date" name="birth" ngModel required #birth="ngModel" class="form-control"/>
+                    <span class="remind-info" *ngIf="display_control.birth">You should be at least 18 years old.</span>
+                    <p> * Zipcode: </p>
+                    <input [(ngModel)]="user_info.zipcode" type="text" name="zipcode" placeholder="12345" required ngModel pattern="^([0-9]{5})$" #zipcode="ngModel" class="form-control"/>
+                    <span class="remind-info" *ngIf="display_control.zipcode">Zipcode shoud be 5 digit numbers.</span>
+                    <p> * Password: </p>
+                    <input  [(ngModel)]="user_info.password" type="password" name="password" [(ngModel)]="pw1" placeholder="Enter Password" pattern="^([a-zA-Z0-9]+\-)([a-zA-Z0-9]+\-)([a-zA-Z0-9]+)$" required ngModel #password="ngModel" class="form-control"/>
+                    <span class="remind-info" *ngIf="display_control.password_pattern">The password should be three-word-passphrase.
+                        You can use a-z, A-Z and 0-9 concatenated by "-".</span>
+                    <p> * Password Confirmation: </p>
+                    <input [(ngModel)]="user_info.passwordConfirm" type="password" name="passwordConfirm" placeholder="Enter Again" [(ngModel)]="pw2" required ngModel #passwordConfirm="ngModel" class="form-control"/>
+                    <span class="remind-info" *ngIf="display_control.password_equal">Password is not equal to password confirmation.</span>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" (click)="reset()" class="btn btn-primary">Reset</button>
+                    <br/>
+                    <span class="remind-info" *ngIf="display_control.success">Cong! Register Successfully!</span>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-6">
+           
+				<div id="log">
+                    <h2>Login</h2>
+                    <form (ngSubmit)="onLogSubmit(login)" #login="ngForm">
+                    <p>Account Name:</p>
+                    <input class="form-control" type="text" id="accountname" name="accountname" ngModel required #accountname="ngModel">
+                    <span class="remind-info" *ngIf="!accountname.valid && accountname.touched ">Account Name is required.</span>
+                    <p>Account Password:</p>
+                    <input class="form-control" type="password" id="account_password" name="account_password" #account_password="ngModel" ngModel required>
+                    <span class="remind-info" *ngIf="!account_password.valid && account_password.touched ">Account Password is required.</span>
+                    <span class="remind-info" *ngIf="login1">The account is not valid or the password is not correct.</span>
+                    <br/>
+                    <br/>
+                    <button type="submit"  class="btn btn-primary">Login</button>
+                    <button type="reset" (click)="login_clear()" class="btn btn-primary">Clear</button>
+                    </form>
+                </div>
+            
+        </div>
+    </div>
+</div>
