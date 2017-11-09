@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Ying Guo">
+        <title>Register Page</title>
+        <style>
+            body{
+                background-color: azure;
+            }
+            h1{
+                text-align: center;
+                color:dodgerblue;
+            }
+            form{
+                text-align: center;
+                border: 2px gray solid;
+                padding: 10px;
+                margin: 0 350px;
+            }
+        </style>
+    </head>
+    
+    <body onload="getTimeStamp()">
+        <h1>Register Now!</h1>
+        <form name="info" method="GET" action="formProcessor.html">
+            <p>( * required )</p>
+            <p> * Account Name: </p>
+            <input type="text" name="accountname" placeholder="First Name Last Name" required/>
+            <p> Display Name: </p>
+            <input type="text" name="displayname" placeholder="Display name"/>		
+            <p> * Email Address: </p>
+            <input type="text" name="email" placeholder="Email address" required/>
+            <p> * Phone Number: </p>
+            <input type="text" name="phone" placeholder="123-123-1234" required/>
+            <p> * Data of Birth: </p>
+            <input type="date" name="birth" required/>
+            <p> * Zipcode: </p>
+            <input type="text" name="zipcode" placeholder="12345" required/>
+            <p> * Password: </p>
+            <input type="password" name="password" placeholder="Enter Password" required/>
+            <p> * Password Confirmation: </p>
+            <input type="password" name="passwordConfirm" placeholder="Enter Again" required/>
+            <input type="hidden" name="TimeStamp" id="timeStamp"/>
+            <br/>
+            <br/>
+            <input type="submit" value="Register" onclick="return validate(document.info)" />
+            <input type="reset" value="Clear" />
+        </form>
+    </body>
+    
+    <script type="text/javascript">
+            function getTimeStamp(){
+                var current = new Date();
+                document.getElementById("timeStamp").value = current.getTime();
+            }
+        
+            function validate(form){
+                var message = new String("");
+                if(!form.accountname.value.match(/^([a-zA-Z]{1})([a-zA-Z0-9])*$/)){
+                    message += "Please input correct name. Number can't be the first letter of name.\n";
+                }
+                if(!form.email.value.match(/^([a-zA-Z0-9\_\-\.])+@([a-zA-Z0-9\_\-])+((\.[a-zA-Z0-9]{2,4}){1,2})$/)){
+                    message += "Please input correct email address.\n";
+                }
+                if(!form.phone.value.match(/^\(?([0-9]{3})\)?[-]?([0-9]{3})[-]?([0-9]{4})$/)){
+                    message += "Please input correct phone number.\n";
+                }
+                if(!checkage(form.birth)){
+                    message += "You are under 18.\n";
+                }
+                if(!form.zipcode.value.match(/^([0-9]{5})$/)){
+                    message += "Please input correct zipcode.\n";
+                }
+                if(form.password.value != form.passwordConfirm.value){
+                    message += "Check your password.\n";
+                }
+                if(message == ""){
+                    alert("Register Success!");
+                    return true;
+                }else{
+                    message += "Register failed."
+                    alert(message);
+                    return false;
+                }
+            }
+        
+            function checkage(birth){
+                var birthdate = birth.value;
+                var birthyear = birthdate.substring(0,4);
+                var birthmonth = birthdate.substring(5,7);
+                var birthday = birthdate.substring(8,10);
+                var current = new Date();
+                var year = current.getFullYear();
+                var month = current.getMonth() + 1;
+                var day = current.getDate();
+
+                if(month > 0 && month < 10){
+                    month = "0" + month;
+                }
+                if(day >= 0 && day < 10){
+                    day = "0" + day;
+                }
+                if(year - birthyear < 18){
+                    return false;
+                }
+                if(year - birthyear == 18){
+                    if(month - birthmonth == 0){
+                        if(day - birthday > 0){
+                           return true;
+                        }
+                        else{
+                           return false;
+                        }
+                    }
+                    else if(month - birthmonth < 0){
+                        return false;
+                    }
+                    else{
+                        return true;
+                    }
+                }
+                return true; 
+            }  
+    </script>
+</html>

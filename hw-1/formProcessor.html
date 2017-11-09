@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Ying Guo">
+        <title>Register Info Page</title>
+        <style>
+            body{
+                text-align: center;
+                background-color: powderblue;
+            }
+            #infotable{
+                margin:0 auto;
+                border: 1px gray solid;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Register Information</h1>
+        <table id="infotable">
+            <tr id="accountname">
+                <th id="an">
+                </th>
+                <td id="an1">
+                </td>
+            </tr>
+            <tr id="displayname">
+                <th id="dn">
+                </th>
+                <td id="dn1">
+                </td>
+            </tr>
+            <tr id="email">
+                <th id="e">
+                </th>
+                <td id="e1">
+                </td>
+            </tr>
+            <tr id="phone">
+                <th id="p">
+                </th>
+                <td id="p1">
+                </td>
+            </tr>
+            <tr id="birth">
+                <th id="b">
+                </th>
+                <td id="b1">
+                </td>
+            </tr>
+            <tr id="zipcode">
+                <th id="z">
+                </th>
+                <td id="z1">
+                </td>
+            </tr>
+            <tr id="password">
+                <th id="pw">
+                </th>
+                <td id="pw1">
+                </td>
+            </tr>
+            <tr>
+                <th id="time">
+                </th>
+                <td id="time1">
+                </td>
+            </tr>
+        </table>
+        
+        <script type="text/javascript">
+            window.onload = function(){
+			var data=location.search.substring(1).split("&");
+			for(detail in data){
+				var details=data[detail].split("=");
+                 if(details[0]=="accountname"){
+					document.getElementById("an").innerHTML = details[0];
+                    document.getElementById("an1").innerHTML = decodeURIComponent(details[1]);
+				}
+                if(details[0]=="displayname" && details[1] != false){
+					document.getElementById("dn").innerHTML = details[0];
+                    document.getElementById("dn1").innerHTML = decodeURIComponent(details[1]);
+				}
+                if(details[0]=="email"){
+					document.getElementById("e").innerHTML = details[0];
+                    document.getElementById("e1").innerHTML = decodeURIComponent(details[1]);
+				}
+                if(details[0]=="phone"){
+					document.getElementById("p").innerHTML = details[0];
+                    document.getElementById("p1").innerHTML = decodeURIComponent(details[1]);
+				}
+                if(details[0]=="birth"){
+					document.getElementById("b").innerHTML = details[0];
+                    document.getElementById("b1").innerHTML = decodeURIComponent(details[1]);
+				}
+                if(details[0]=="zipcode"){
+					document.getElementById("z").innerHTML = details[0];
+                    document.getElementById("z1").innerHTML = decodeURIComponent(details[1]);
+				}
+                if(details[0]=="password"){
+					document.getElementById("pw").innerHTML = details[0];
+                    document.getElementById("pw1").innerHTML = decodeURIComponent(details[1]);
+				}
+                if(details[0]=="TimeStamp"){
+					document.getElementById("time").innerHTML = details[0];
+                    document.getElementById("time1").innerHTML = new Date(parseInt(details[1]));
+				}
+			}
+		  }
+        </script>
+    </body>
+    
+</html>
