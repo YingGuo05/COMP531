@@ -1,0 +1,56 @@
+body{
+    
+    text-align: center;
+    background-color: oldlace;
+}
+#instruction{
+    width: 800px;
+    height:60px;
+    margin: 0 auto;
+    border: 12px solid;
+    border-color: antiquewhite;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius:15px;
+}
+table{
+    width: 300px;
+    height:400px;
+    margin: 0 auto;
+    border: 20px solid;
+    border-color: antiquewhite;
+    border-radius:15px;
+}
+img{
+    width: 180px;
+    height: 100px;
+}
+button{
+    
+    font-size: 20px;
+    height: 55px;
+    width: 120px;
+    border-radius: 6px;
+	background: #FFCCCC;
+	display: inline-block;
+	padding: 5px 10px 6px;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border: 6px solid rgb(176,176,176);
+	position: relative;
+	cursor: pointer
+}
+#item_size{
+    padding-top: 0;
+    margin: 0;
+}
+#info{
+    width: 400px;
+    height:60px;
+    margin: 5px auto;
+    border: 12px solid;
+    border-color: coral;
+    border-radius:15px;
+    color: red;
+}

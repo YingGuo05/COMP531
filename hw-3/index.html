@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name = "author" content = "Ying Guo">
+        <title>Guess Max Value</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <audio src="bgmisc.mp3" controls="controls" loop="loop" autoplay="true"></audio>
+        <h1>Guess Maximum Value</h1>
+        <div id="instruction">Instructions: There are different valuable items for you to choose. Each has it own size. Your bag size is limited. You can't take all of them. Figure out the maximun value you can take once a time underthe bag's storage limit. Each round you have time to think, calculate and submit answer. If you submit the correct the answer, your score increases. With more scores you get, the game will be difficult. If you get 100 points, you win and game over.</div>
+        <div id="info" style="display: none">
+            <p id="alert_info"></p>
+        </div>
+        <h3>current score: <span id="current_score">0</span> best score: <span id="best_score">0</span> Game Time: <span id="time">0</span></h3>
+        <h3>Records for fastest passing all questions: <span id = "win_game_time"></span></h3>
+        <h2>Left time: <span id="left_time">45</span> s</h2>
+        <h2>Your bag's size is <span id="bag_size">0</span></h2>
+        The Max Value:
+        <input type="text" name="answer" id="answer"/>
+        <button id="submit" onclick="submit_answer()">Submit</button>
+        <button id="start" onclick="start()">Start</button>
+        <table id="item_display">
+            <tr id="item_pic">
+                <td>
+                    <img src="/Users/yingguo/Desktop/COMP531/yg45/hw-3/picture/pic1.jpg" id="item_pic0">
+                </td>
+                <td>
+                    <img src="/Users/yingguo/Desktop/COMP531/yg45/hw-3/picture/pic5.jpg" id="item_pic1">
+                </td>
+                <td>
+                    <img src="/Users/yingguo/Desktop/COMP531/yg45/hw-3/picture/pic9.jpg" id="item_pic2">
+                </td>
+                <td>
+                    <img src="/Users/yingguo/Desktop/COMP531/yg45/hw-3/picture/pic13.jpg" style="display: none" id="item_pic3" style="display: none">
+                </td>
+            </tr>
+            <tr id="item_price">
+                <td>
+                    <p><span id="item_price0"></span></p>
+                </td>
+                <td>
+                    <p><span id="item_price1"></span></p>
+                </td>
+                <td>
+                    <p><span id="item_price2"></span></p>
+                </td>
+                <td>
+                    <p><span id="item_price3" style="display: none"></span></p>
+                </td>
+            </tr>
+            <tr id="item_size">
+                <td>
+                    <p><span id="item_size0"></span></p>
+                </td>
+                <td>
+                    <p><span id="item_size1"></span></p>
+                </td>
+                <td>
+                    <p><span id="item_size2"></span></p>
+                </td>
+                <td>
+                    <p><span id="item_size3" style="display: none"></span></p>
+                </td>
+            </tr>
+        </table>
+        
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
