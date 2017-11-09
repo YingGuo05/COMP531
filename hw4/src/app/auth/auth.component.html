@@ -1,0 +1,60 @@
+ <div class="container">
+    	<table>
+		    <tbody>
+				<tr>
+					<td class="col-sm-6">
+                        <div id="reg">
+                            <h2>Register</h2>
+                            <form (ngSubmit)="onRegSubmit(register)" #register="ngForm" >
+                                    <p>( * required )</p>
+                                    <p> * Name: </p>
+                                    <input type="text" name="name" placeholder="Name" ngModel #name="ngModel" required pattern="^([a-zA-Z]{1})([a-zA-Z0-9])*$" class="form-control"/>
+                                    <span *ngIf="!name.valid && name.touched ">Input Name is not correct.</span>
+                                    <p> * Email Address: </p>
+                                    <input type="text" name="email" placeholder="Email address" required ngModel pattern="^([a-zA-Z0-9\_\-\.])+@([a-zA-Z0-9\_\-])+((\.[a-zA-Z0-9]{2,4}){1,2})$" #email="ngModel" class="form-control"/>
+                                    <span *ngIf="!email.valid && email.touched">Email is not correct.</span>
+                                    <p> * Phone Number: </p>
+                                    <input type="text" name="phone" placeholder="123-123-1234" required ngModel pattern="^\(?([0-9]{3})\)?[-]?([0-9]{3})[-]?([0-9]{4})$" #phone="ngModel" class="form-control"/>
+                                    <span *ngIf="!phone.valid && phone.touched">Phone Number is not correct.</span>
+                                    <p> * Data of Birth: </p>
+                                    <input type="date" name="birth" ngModel required #birth="ngModel" class="form-control"/>
+                                    <span *ngIf="birth.touched && !checkage(birth)">You should be at least 18 years old.</span>
+                                    <p> * Zipcode: </p>
+                                    <input type="text" name="zipcode" placeholder="12345" required ngModel pattern="^([0-9]{5})$" #zipcode="ngModel" class="form-control"/>
+                                    <span *ngIf="!zipcode.valid && zipcode.touched">Zipcode shoud be 5 digit numbers.</span>
+                                    <p> * Password: </p>
+                                    <input type="password" name="password" [(ngModel)]="pw1" placeholder="Enter Password" required ngModel #password="ngModel" class="form-control"/>
+                                    <p> * Password Confirmation: </p>
+                                    <input type="password" name="passwordConfirm" placeholder="Enter Again" [(ngModel)]="pw2" required ngModel #passwordConfirm="ngModel" class="form-control"/>
+                                    <span *ngIf="pw1!=pw2">Password is not equal to password confirmation.</span>
+                                    <br/>
+                                    <br/>
+                                    <span *ngIf="!register.valid">You have to input all the information in correct format before clicking submit button.<br/></span>
+                                    <br/>
+                                    <button type="submit" [disabled]="!register.valid" class="btn btn-primary">Submit</button>
+                                    <button type="button" (click)="reset()" class="btn btn-primary">Reset</button>
+                            </form>
+                        </div>
+					</td>
+					<td class="col-sm-6">
+						<div id="log">
+                            <h2>Login</h2>
+                            <form (ngSubmit)="onLogSubmit(login)" #login="ngForm">
+                                <p>Account Name:</p>
+                                <input class="form-control" type="text" name="accountname" ngModel required #accountname="ngModel">
+                                <span *ngIf="!accountname.valid && name.touched ">Account Name is required.</span>
+                                <p>Account Password:</p>
+                                <input class="form-control" type="password" name="account_password" #account_password="ngModel" ngModel required>
+                                <span *ngIf="!account_password.valid && account_password.touched ">Account Password is required.</span>
+                                <br/>
+                                <span *ngIf="!login.valid">You have to input accoutn name and password before clicking login.</span>
+                                 <br/>
+                                <button type="submit"  class="btn btn-primary" [disabled]="!login.valid">Login</button>
+                                <button type="reset" class="btn btn-primary">Clear</button>
+                            </form>
+                        </div>
+					</td>
+				</tr>
+			</tbody>
+        </table>
+</div>

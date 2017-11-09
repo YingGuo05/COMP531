@@ -1,0 +1,71 @@
+
+    <div class="container">
+        <div class="text-center">
+            <nav>
+                <a routerLink="/profile" routerLinkActive="active" class="btn btn-primary">Profile</a>
+                <a routerLink="/auth" routerLinkActive="active" class="btn btn-primary">Logout</a>
+            </nav>
+            <router-outlet></router-outlet>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <br/>
+                <img src="assets/images/pic5.jpg" class="rounded" alt="http://img3.imgtn.bdimg.com/it/u=3490529943,881752914&fm=214&gp=0.jpg" width="300px" height="200px">
+                <h4>{{name}}</h4>
+                <h5>{{currentStatus}}</h5>
+                <input type="text" placeholder="New Status" [(ngModel)]="status">
+                <button type="button" (click)="changeStatus()" class="btn btn-primary">Update</button>
+            </div>
+            <div class="col-md-6">
+                <h5>New Post!</h5>
+                <textarea placeholder="new post here" rows="10" cols="60" [(ngModel)]="newPost"></textarea>
+                <br/>
+                <input type="file" class="btn">
+                <button type="button" class = "btn btn-primary" (click)="clear()">Cancel</button>
+                <button type="button" class = "btn btn-primary" (click)="addPost()">Post</button>
+                
+                
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <h1>Followers</h1>
+                <div *ngFor="let f of followers">
+                    <mat-card *ngIf="f.display" class="followers">
+                        <mat-card-title class="followers-text">
+                            <h4>{{f.name}}</h4>
+                        </mat-card-title>
+                        <img mat-card-img src="{{f.img}}" alt="#" width="200px" height="100px" class="followers">
+                        <mat-card-content class="followers-text">
+                            <h5>{{f.status}}</h5>
+                        </mat-card-content>
+                        <button type="button" (click)="delete(f)" class="btn btn-primary unfollow">unfollow</button>
+                    </mat-card>
+                </div>
+                <br/>
+                <input type="text" [(ngModel)] = "follower">
+                <button type="button" class = "btn btn-primary"  (click)="add()">Add New </button>
+            </div>
+            <div class="col-md-8">
+                <h1>Posts</h1>
+                <input type="text" placeholder="Search ..." class="form-control" (keyup)="filter($event)">
+                
+                <div *ngFor="let f1 of article">
+                    <mat-card *ngIf="f1.display">
+                        <mat-card-title>
+                            <h3>{{f1.author}}</h3>
+                        </mat-card-title>
+                        <img mat-card-img src="{{f1.img}}" alt="" width="400px" height="230px">
+                        <mat-card-content>
+                            <h5>{{f1.text}}</h5>
+                            <h4>{{f1.date}}</h4>
+                        </mat-card-content>
+                        <button type="button"  class="btn btn-primary">Edit</button>
+                        <button type="button"  class="btn btn-primary">Comment</button>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
