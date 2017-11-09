@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Ying Guo">
+        <title>Avoid Mouse Game</title>
+        <style>
+            button{
+    		  position:absolute;
+    	    }
+            #success{
+                position: fixed;
+                top: 15%;
+                left: 15%;
+                text-align: center;
+                color: blue;
+                background-color: #42F503;
+                border-color: red;
+                padding: 0.5em 1em 0.5em 1em;
+                border-style: solid;
+                border-width: 0.25em;
+                border-radius: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Click the button and win the game!</p>
+        <button id="mybtn">Click Me</button>
+	    <div id="success" style="display: none">
+		    <p>Congratulations!</p>
+		    <p>You Won!</p>
+	    </div>
+    </body>
+    <script type="text/javascript" src="avoidmousegame.js"></script>
+</html>

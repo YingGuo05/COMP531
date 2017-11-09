@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://www.clear.rice.edu/comp431/sample/mocha-inclass-fetch.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Inclass Fetch Exercise</title>
+
+  <link rel="stylesheet" href="./Inclass Fetch Exercise_files/mocha.min.css">
+  <script src="./Inclass Fetch Exercise_files/mocha.min.js"></script>
+  <script src="./Inclass Fetch Exercise_files/chai.min.js"></script>
+
+</head>
+<body>
+  <div id="mocha"><ul id="mocha-stats"><li class="progress"><canvas width="80" height="80"></canvas></li><li class="passes"><a href="javascript:void(0);">passes:</a> <em>1</em></li><li class="failures"><a href="javascript:void(0);">failures:</a> <em>5</em></li><li class="duration">duration: <em>0.61</em>s</li></ul><ul id="mocha-report"><li class="suite"><h1><a href="https://www.clear.rice.edu/comp431/sample/mocha-inclass-fetch.html?grep=Mocha%5C%2BChai%20Inclass%20Fetch%20Exercise%20for%20%22undefined%22">Mocha+Chai Inclass Fetch Exercise for "undefined"</a></h1><ul><li class="test fail"><h2>author should be defined <a href="https://www.clear.rice.edu/comp431/sample/mocha-inclass-fetch.html?grep=Mocha%5C%2BChai%20Inclass%20Fetch%20Exercise%20for%20%22undefined%22%20author%20should%20be%20defined" class="replay">‣</a></h2><pre class="error">AssertionError: expected undefined to be truthy
+    at n.it (mocha-inclass-fetch.spec.js:39:37)
+    at r (https://cdnjs.cloudflare.com/ajax/libs/mocha/3.0.0-2/mocha.min.js:2:8025)
+    at r.run (https://cdnjs.cloudflare.com/ajax/libs/mocha/3.0.0-2/mocha.min.js:2:9026)
+    at i.runTest (https://cdnjs.cloudflare.com/ajax/libs/mocha/3.0.0-2/mocha.min.js:2:13512)
+    at https://cdnjs.cloudflare.com/ajax/libs/mocha/3.0.0-2/mocha.min.js:2:14151
+    at r (https://cdnjs.cloudflare.com/ajax/libs/mocha/3.0.0-2/mocha.min.js:2:12983)
+    at https://cdnjs.cloudflare.com/ajax/libs/mocha/3.0.0-2/mocha.min.js:2:12959
+    at n (https://cdnjs.cloudflare.com/ajax/libs/mocha/3.0.0-2/mocha.min.js:2:12750)
+    at https://cdnjs.cloudflare.com/ajax/libs/mocha/3.0.0-2/mocha.min.js:2:12740
+    at n (https://cdnjs.cloudflare.com/ajax/libs/mocha/3.0.0-2/mocha.min.js:2:7997)</pre><pre style="display: none;"><code>expect(inclass.author).to.be.ok</code></pre></li><li class="test fail"><h2>countWords should count the number of words in each article <a href="https://www.clear.rice.edu/comp431/sample/mocha-inclass-fetch.html?grep=Mocha%5C%2BChai%20Inclass%20Fetch%20Exercise%20for%20%22undefined%22%20countWords%20should%20count%20the%20number%20of%20words%20in%20each%20article" class="replay">‣</a></h2><pre class="error">AssertionError: expected 3 to equal 10
+    at inclass.countWords.then.r (mocha-inclass-fetch.spec.js:45:46)
+    at &lt;anonymous&gt;</pre><pre style="display: none;"><code>inclass.countWords(sample)
+.then(r =&gt; {
+    expect(Object.keys(r).length).to.equal(<span class="number">10</span>)
+    Object.keys(r).forEach(key =&gt; {
+        expect(r[key]).to.be.above(<span class="number">0</span>)
+    })
+    done()
+})
+.catch(done)</code></pre></li><li class="test fail"><h2>countWords should pass through errors <a href="https://www.clear.rice.edu/comp431/sample/mocha-inclass-fetch.html?grep=Mocha%5C%2BChai%20Inclass%20Fetch%20Exercise%20for%20%22undefined%22%20countWords%20should%20pass%20through%20errors" class="replay">‣</a></h2><pre class="error">Error: Received response instead of error {"1":2,"3":4,"5":6}
+    at inclass.countWords.then.r (mocha-inclass-fetch.spec.js:57:18)
+    at &lt;anonymous&gt;</pre><pre style="display: none;"><code>inclass.countWords(`${baseURL}/badURL`)
+.then(r =&gt; {
+    done(<span class="keyword"><span class="keyword">new</span></span> <span class="init">Error</span>(`Received response instead of error ${JSON.stringify(r)}`))
+})
+.catch(e =&gt; {
+    done()
+})</code></pre></li><li class="test pass medium"><h2>getLargest should give me the id of the article with the most number of words<span class="duration">53ms</span> <a href="https://www.clear.rice.edu/comp431/sample/mocha-inclass-fetch.html?grep=Mocha%5C%2BChai%20Inclass%20Fetch%20Exercise%20for%20%22undefined%22%20getLargest%20should%20give%20me%20the%20id%20of%20the%20article%20with%20the%20most%20number%20of%20words" class="replay">‣</a></h2><pre style="display: none;"><code>inclass.getLargest(sample)
+.then(r =&gt; { expect(parseInt(r)).to.equal(parseInt(longest)); done() })
+.catch(done)</code></pre></li><li class="test fail"><h2>countWordsSafe should catch all errors and return an empty object <a href="https://www.clear.rice.edu/comp431/sample/mocha-inclass-fetch.html?grep=Mocha%5C%2BChai%20Inclass%20Fetch%20Exercise%20for%20%22undefined%22%20countWordsSafe%20should%20catch%20all%20errors%20and%20return%20an%20empty%20object" class="replay">‣</a></h2><pre class="error">AssertionError: expected 1 to equal 0
+    at inclass.countWordsSafe.then.r (mocha-inclass-fetch.spec.js:72:55)
+    at &lt;anonymous&gt;</pre><pre style="display: none;"><code>inclass.countWordsSafe(`${baseURL}/badURL`)
+.then(r =&gt; { expect(Object.keys(r).length).to.equal(<span class="number">0</span>); done() })
+.catch(done)</code></pre></li><li class="test fail"><h2>countWordsSafe should count the number of words in each article <a href="https://www.clear.rice.edu/comp431/sample/mocha-inclass-fetch.html?grep=Mocha%5C%2BChai%20Inclass%20Fetch%20Exercise%20for%20%22undefined%22%20countWordsSafe%20should%20count%20the%20number%20of%20words%20in%20each%20article" class="replay">‣</a></h2><pre class="error">AssertionError: expected 1 to equal 10
+    at inclass.countWordsSafe.then.r (mocha-inclass-fetch.spec.js:79:46)
+    at &lt;anonymous&gt;</pre><pre style="display: none;"><code>inclass.countWordsSafe(sample)
+.then(r =&gt; {
+    expect(Object.keys(r).length).to.equal(<span class="number">10</span>)
+    Object.keys(r).forEach(key =&gt; {
+        expect(r[key]).to.be.above(<span class="number">0</span>)
+    })
+    done()
+})
+.catch(done)</code></pre></li></ul></li></ul></div>
+  <div id="messages"></div>
+  <div id="fixtures"></div>
+
+  <script src="./Inclass Fetch Exercise_files/inclass-fetch.js"></script>
+  <script>mocha.setup('bdd');</script>
+  <script src="./Inclass Fetch Exercise_files/mocha-inclass-fetch.spec.js"></script>
+  <script>mocha.run();</script>
+
+
+
+</body></html>

@@ -1,0 +1,7 @@
+<md-toolbar color="primary">list works</md-toolbar>
+<md-list>
+    <md-list-item *ngFor="let compInfo of siteCompInfo">
+        <h3>name:{{compInfo.name}}</h3>
+        <p>description: {{compInfo.description}}</p>
+    </md-list-item>
+</md-list>

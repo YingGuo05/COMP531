@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Ying Guo">
+        <link href="pizza.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <img src="pizza.jpeg" width="340px" height="340px">
+        <h1>Welcome to Ying's Pizza!</h1>
+        <h2><i>You can order pizza now.</i></h2>
+        <form name="order" method="get" action="#">
+            <p>Name:</p>
+            <input type="text" name="name" placeholder="First Name Last Name" required>
+            <p>Address:### Street Name</p>
+            <input type="text" name="address" placeholder="Delivery address" required>
+            <p>Phone Number:123-123-123</p>
+            <input type="text" name="phonenumber" placeholder="123-123-1234" pattern='\d\d\d-\d\d\d-\d\d\d\d' required>
+            <p><u>Pizza Size</u></p>
+            <input type="radio" id="Large" name="size" value="Large">Large
+            <input type="radio" id="Medium" name="size" value="medium">Medium
+            <input type="radio" id="Small" name="size" value="Small">Small
+            <p><u>Pizza Toppings</u></p>
+            <input type="checkbox" name="pizzaTopping" value="Sausage">Sausage
+		    <input type="checkbox" name="pizzaTopping" value="Pepperoni">Pepperoni
+		    <input type="checkbox" name="pizzaTopping" value="Olives">Olives
+		    <input type="checkbox" name="pizzaTopping" value="Anchovies">Anchovies
+		    <input type="checkbox" name="pizzaTopping" value="Onions">Onions
+            <br>
+            <br>
+            <input type="submit" value="Place order" onclick="return checkinfo(document.order)">
+            <input type="reset" value="Clear">
+            <br>
+            <br>
+        </form>
+        <script type="text/javascript">
+            
+            function checkinfo(form){
+                var info=new String("");
+                if(form.name.value==false){
+                    info += "Please input your name.\n";
+                }
+                if(form.address.value==false){
+                    info += "Please input your address.\n";
+                }
+                if(checkPhone(form.phonenumber) == false){
+                    info += "Please input correct phone number.\n"
+                }
+                if(form.Large.checked == false && form.Medium.checked == false &&
+                  form.Small.checked == false){
+                    info += "Please choose size.\n"
+                }
+                if(info != ""){
+                    alert(info);
+                }else{
+                    alert("Your order has been made!");
+                }
+            }
+            function checkPhone(num){
+                var number = num.value;
+                if(!number.match(/^\(?([0-9]{3})\)?[-]?([0-9]{3})[-]?([0-9]{4})$/) || number.value == false){
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>
+
+    

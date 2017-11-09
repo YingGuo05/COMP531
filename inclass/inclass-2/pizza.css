@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+    color: chocolate;
+}
+h2{
+    text-align: center;
+    color: coral;
+}
+form{
+    text-align: center;
+    border: 2px gray solid;
+    padding: 10px;
+    margin: 0 350px;
+}
+img{
+    display: block;
+    margin: 0 auto;
+}

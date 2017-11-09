@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="author" content="Ying Guo">
+      <title>Hello Javascript</title>
+  </head>
+  <body>
+      <p>After <span id="indictor">15</span> seconds, you will redirct to another page!</p>
+      <h1>Welcome to Ying Guo's homepage</h1>
+      <div>
+      <img src="myphoto.jpeg">
+      <p>Hi, my friends! I'm Ying Guo! I come from China. This photo was taken in Beijing, China. Friends and I went to taste new
+        product in Diary Queen. The ice cream was great with chocolate and cookies.</p>
+      <p> I love cooking and working out in the gym. Doing exercise makes me relaxed and enjoying tasty food makes me happy.
+          Would you want to join me? You can leave your message~ </p>
+      </div>
+      <textarea id="text" rows="10" cols="30"></textarea>
+      <button onclick="clearTextarea()">Clear Textarea</button>
+      <div id=“bottom”>
+        <h3>More interesting things can be found in:</h3>
+        <a href="http://www.google.com">google</a>
+        <a href="http://www.youtube.com">youtube</a>
+        <a href="http://www.rice.edu">Rice</a>
+      </div>
+      
+      <script type="text/javascript">
+          var interval = setInterval(countDown,1000);
+          var indictor = document.getElementById("indictor");
+          setTimeout(alertuser,5000);
+          function alertuser(){
+              window.alert("the page will redirect when the counter reaches zero");
+          }
+          function clearTextarea(){
+              document.getElementById("text").value="";
+          }
+          function countDown(){
+              indictor.innerHTML--;
+              if(indictor.innerHTML==0){
+                  clearInterval(interval);
+				  window.location = "http://www.rice.edu";
+			  }
+          }
+      </script>
+  </body>
+</html>
