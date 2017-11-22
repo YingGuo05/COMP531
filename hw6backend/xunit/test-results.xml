@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.31799999999999995" tests="6" failures="0">
+  <testsuite name="Root Suite" timestamp="2017-11-13T15:25:08" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Validate Article functionality" timestamp="2017-11-13T15:25:08" tests="3" file="/Users/yingguo/Desktop/531web/hw6-backend/src/articles.spec.js" failures="0" time="0.16699999999999998">
+    <testcase name="Validate Article functionality should give me 10 or more articles" time="0.064" classname="should give me 10 or more articles">
+    </testcase>
+    <testcase name="Validate Article functionality should add a post" time="0.053" classname="should add a post">
+    </testcase>
+    <testcase name="Validate Article functionality should increase the length by 1" time="0.05" classname="should increase the length by 1">
+    </testcase>
+  </testsuite>
+  <testsuite name="test the Profile function" timestamp="2017-11-13T15:25:08" tests="3" file="/Users/yingguo/Desktop/531web/hw6-backend/src/profile.spec.js" failures="0" time="0.151">
+    <testcase name="test the Profile function get the current headline" time="0.048" classname="get the current headline">
+    </testcase>
+    <testcase name="test the Profile function update the current headline" time="0.052" classname="update the current headline">
+    </testcase>
+    <testcase name="test the Profile function check the update headline" time="0.051" classname="check the update headline">
+    </testcase>
+  </testsuite>
+</testsuites>
