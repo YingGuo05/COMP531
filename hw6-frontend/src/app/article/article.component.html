@@ -1,0 +1,75 @@
+<div class="row">
+    <div class="centered">
+            <div class="col-md-4">
+                <br/>
+                <img src={{avatarPic}} class="rounded" alt="http://img3.imgtn.bdimg.com/it/u=3490529943,881752914&fm=214&gp=0.jpg" width="300px" height="200px">
+                <h4>{{name}}</h4>
+                <h5 id="headline">{{headline}}</h5>
+                <input id="changehd" type="text" placeholder="New Status" [(ngModel)]="status">
+                <button type="button" (click)="changeStatus()" id="changebtn" class="btn btn-primary">Update</button>
+                <h1>Followers</h1>
+                <div *ngFor="let f of followers">
+                    <div class="followers">
+                        <h3 class="followers-text">
+                            <h4>{{f?.username}}</h4>
+                        </h3>
+                        <img src="{{f?.avatar}}" alt="#" width="230px" height="130px" class="followers">
+                        <h5>
+                            <h5>{{f?.headline}}</h5>
+                        </h5>
+                        <button type="button" (click)="delete(f.username)" class="btn btn-primary unfollow">unfollow</button>
+                    </div>
+                </div>
+                <br/>
+                <input id="addnewfollower" type="text" [(ngModel)] = "follower">
+                <button id="addnewfollowerbtn" type="button" class = "btn btn-primary"  (click)="add()">Add New </button>
+                <h4>{{remind}}</h4>
+            </div>
+            <div class="col-md-8">
+                <h5>New Post!</h5>
+                <textarea id="addnewpost" placeholder="new post here" rows="10" cols="60" [(ngModel)]="newPost"></textarea>
+                <br/>
+                <input type="file" #postPic capture="camera" accept="image/*" (change)="displayPhoto($event)">
+                <button type="button" class = "btn btn-primary" (click)="clear()">Cancel</button>
+                <button type="button" id="addnewpostbtn" class = "btn btn-primary" (click)="addPost()">Post</button>
+                <h1>Posts</h1>
+                <input type="text" placeholder="Search ..." id="search" class="form-control" (keyup)="filter($event)">
+                <br/>
+                <div *ngFor="let f1 of article" class="card">
+                    
+                    <div class="post">
+                        <div>
+                            <h3 class="author">{{f1?.author}}</h3>
+                        </div>
+                        <img  src="{{f1?.img}}" alt="" width="400px" height="230px">
+                        <div>
+                            <h5 id='test'>Text:</h5>
+                            <!-- <h5>{{f1.text}}</h5> -->
+                            <h4 class="text" id= "{{f1._id}}article" contenteditable="false">{{f1?.text}}</h4>
+                            <h4>{{f1?.date}}</h4>
+                            <div id = "{{f1._id}}" class="comment_area">
+                                <h4>Comments: </h4>
+                                    <div *ngFor="let comment of f1.comments">
+                                        <div class = "comment"id="{{f1._id}}comment{{comment.id}}" >
+                                            <h4 id="art{{f1._id}}comment{{comment.commentId}}" contenteditable="false">{{comment?.text}}</h4><p>author: {{comment?.author}}</p>
+                                            <!-- <button class="btn btn-primary" type="button" (click) = "remove_comment(f1._id,comment.id)">remove</button> -->
+                                            <button class="btn btn-primary" type="button" (click) = "editComment(f1._id,comment.commentId,comment.author)">edit and save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <br/>
+                        <div >
+                            <textarea class = "comment-area" #text id="{{f1._id}}newcomment"  placeholder="new comment here" rows="5" cols="30"></textarea>
+                        </div>
+                        
+                        <br/>
+                            <button type="button"  class="edit btn btn-primary" (click)="editArticle(f1._id,f1.author)">Edit and Save</button>
+                            <button type="button"  class="btn btn-primary" (click)="addComment(f1._id,text.value)">Comment</button>
+                            <button type="button" (click)="toggle(f1._id)"  id="{{f1._id}}disbtn"class="btn btn-primary">Display comments</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+

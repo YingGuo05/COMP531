@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app/auth/register.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/app/auth</a> register.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">18.87% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>10/53</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">40% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">15.69% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>8/51</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable } from '@angular/core';
+&nbsp;
+&nbsp;
+@Injectable()
+export class RegisterService {
+    display_control={
+      name:false,
+      email:false,
+      phone:false,
+      birth:false,
+      zipcode:false,
+      password_pattern:false,
+      password_equal:false,
+      success:false
+    }
+  constructor() { }
+  birth:any;
+  today;
+  birthDate ;
+  age ;
+  m;
+  mark = true;
+<span class="fstat-no" title="function not covered" >  checkage(</span>birthday:string):boolean{
+    //check user is 18 years old or not
+  
+<span class="cstat-no" title="statement not covered" >      this.birth = birthday;</span>
+<span class="cstat-no" title="statement not covered" >      this.today = new Date();</span>
+<span class="cstat-no" title="statement not covered" >      this.birthDate = new Date(this.birth);</span>
+<span class="cstat-no" title="statement not covered" >      this.age = this.today.getFullYear() - this.birthDate.getFullYear();</span>
+<span class="cstat-no" title="statement not covered" >      this.m = this.today.getMonth() - this.birthDate.getMonth();</span>
+<span class="cstat-no" title="statement not covered" >      if (this.m &lt; 0 || (this.m === 0 &amp;&amp; this.today.getDate() &lt; this.birthDate.getDate())) {</span>
+<span class="cstat-no" title="statement not covered" >          this.age--;</span>
+      }
+<span class="cstat-no" title="statement not covered" >      if(this.age&lt;18)</span>
+<span class="cstat-no" title="statement not covered" >          return false;</span>
+<span class="cstat-no" title="statement not covered" >      return true;</span>
+  }
+<span class="fstat-no" title="function not covered" >  validateReg(</span>form:any):any{
+<span class="cstat-no" title="statement not covered" >    if(!form.name.match(/^([a-zA-Z]{1})([a-zA-Z0-9])*$/)){</span>
+<span class="cstat-no" title="statement not covered" >      this.mark = false;</span>
+<span class="cstat-no" title="statement not covered" >      this.display_control.name = true;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if(!form.email</span>
+      .match(/^([a-zA-Z0-9\_\-\.])+@([a-zA-Z0-9\_\-])+((\.[a-zA-Z0-9]{2,4}){1,2})$/)){
+<span class="cstat-no" title="statement not covered" >        this.display_control.email = true;</span>
+<span class="cstat-no" title="statement not covered" >        this.mark = false;</span>
+      }
+<span class="cstat-no" title="statement not covered" >    if(!form.phone.match(/^([0-9]{3}\-)([0-9]{3}\-)([0-9]{4})$/)){</span>
+<span class="cstat-no" title="statement not covered" >      this.display_control.phone = true;</span>
+<span class="cstat-no" title="statement not covered" >      this.mark = false;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if(!this.checkage(form.birth)){</span>
+<span class="cstat-no" title="statement not covered" >      this.display_control.birth = true;</span>
+<span class="cstat-no" title="statement not covered" >      this.mark = false;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if(!form.zipcode.match(/^([0-9]{5})$/)){</span>
+<span class="cstat-no" title="statement not covered" >      this.mark = false;</span>
+<span class="cstat-no" title="statement not covered" >      this.display_control.zipcode = true;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if(form.password != form.passwordConfirm){</span>
+<span class="cstat-no" title="statement not covered" >      this.mark = false;</span>
+<span class="cstat-no" title="statement not covered" >      this.display_control.password_equal = true;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if(!form.password</span>
+      .match(/^([a-zA-Z0-9]+\-)([a-zA-Z0-9]+\-)([a-zA-Z0-9]+)$/)){
+<span class="cstat-no" title="statement not covered" >        this.display_control.password_pattern = true;</span>
+<span class="cstat-no" title="statement not covered" >        this.mark = false;</span>
+      }
+<span class="cstat-no" title="statement not covered" >    if(this.mark)</span>
+<span class="cstat-no" title="statement not covered" >      this.display_control.success = true;</span>
+<span class="cstat-no" title="statement not covered" >    return this.display_control;</span>
+  }
+<span class="fstat-no" title="function not covered" >  reset():any{</span>
+<span class="cstat-no" title="statement not covered" >    this.display_control.name = false;</span>
+<span class="cstat-no" title="statement not covered" >    this.display_control.email = false;</span>
+<span class="cstat-no" title="statement not covered" >    this.display_control.password_equal = false;</span>
+<span class="cstat-no" title="statement not covered" >    this.display_control.password_pattern = false;</span>
+<span class="cstat-no" title="statement not covered" >    this.display_control.phone = false;</span>
+<span class="cstat-no" title="statement not covered" >    this.display_control.birth = false;</span>
+<span class="cstat-no" title="statement not covered" >    this.display_control.zipcode = false;</span>
+<span class="cstat-no" title="statement not covered" >    this.display_control.success = false;</span>
+<span class="cstat-no" title="statement not covered" >    return this.display_control;</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Oct 26 2017 14:53:45 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

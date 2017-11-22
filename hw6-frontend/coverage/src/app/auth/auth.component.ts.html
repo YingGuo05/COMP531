@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app/auth/auth.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/app/auth</a> auth.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">63.64% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>28/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70.97% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>22/31</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">37.5% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.76% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>21/37</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnInit,ViewChild} from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ShareService } from '../share.service';
+import { LoginService } from './login.service';
+import {RegisterService} from './register.service'
+import { HttpClient,HttpClientModule } from '@angular/common/http';
+@Component({
+  selector: 'app-auth',
+  templateUrl: './auth.component.html',
+  styleUrls: ['./auth.component.css'],
+  providers:[RegisterService]
+})
+&nbsp;
+export class AuthComponent implements OnInit {
+    @ViewChild('register') regForm:NgForm<span class="branch-1 cbranch-no" title="branch not covered" >;</span>
+    @ViewChild('login') logForm :NgForm<span class="branch-1 cbranch-no" title="branch not covered" >;</span>
+    //use pw1 and pw2 to check whether the password and passwordConfirm are the same
+    pw1:string;
+    pw2:string;
+    array:any;
+    login1=false;
+    
+    user_info ={
+        name:'',
+        password:'',
+        email:'',
+        phone:'',
+        birth:new Date(),
+        zipcode:'',
+        passwordConfirm:''
+    };
+    users;
+    display_control={
+        name:false,
+        email:false,
+        phone:false,
+        birth:false,
+        zipcode:false,
+        password_pattern:false,
+        password_equal:false,
+        success:false
+      }
+<span class="fstat-no" title="function not covered" >    onRegSubmit(</span>Form1:NgForm){
+<span class="cstat-no" title="statement not covered" >        this.display_control = this.register.validateReg(this.user_info);</span>
+    }
+<span class="fstat-no" title="function not covered" >    reset(){</span>
+<span class="cstat-no" title="statement not covered" >        this.display_control = this.register.reset();</span>
+<span class="cstat-no" title="statement not covered" >        this.user_info.name = '';</span>
+<span class="cstat-no" title="statement not covered" >        this.user_info.email = '';</span>
+<span class="cstat-no" title="statement not covered" >        this.user_info.phone = '';</span>
+<span class="cstat-no" title="statement not covered" >        this.user_info.password = '';</span>
+<span class="cstat-no" title="statement not covered" >        this.user_info.zipcode = '';</span>
+<span class="cstat-no" title="statement not covered" >        this.user_info.passwordConfirm ='';</span>
+<span class="cstat-no" title="statement not covered" >        this.user_info.birth = null;</span>
+    }
+<span class="fstat-no" title="function not covered" >    onLogSubmit(</span>Form2:NgForm){
+<span class="cstat-no" title="statement not covered" >        console.log(this.users)</span>
+        //update name and password into userinfo and send it to service
+<span class="cstat-no" title="statement not covered" >        if(this.login.loginValidate(this.users,Form2.value.accountname,Form2.value.account_password))</span>
+<span class="cstat-no" title="statement not covered" >            this.router.navigate(['../main']);</span>
+        else{
+<span class="cstat-no" title="statement not covered" >            this.showLoginError()</span>
+        }
+<span class="cstat-no" title="statement not covered" >        this.logForm.reset();</span>
+    }
+    constructor(private router:Router<span class="branch-1 cbranch-no" title="branch not covered" >,private share:</span>ShareService<span class="branch-2 cbranch-no" title="branch not covered" >,private login:</span>LoginService<span class="branch-2 cbranch-no" title="branch not covered" >,private register:</span>RegisterService<span class="branch-2 cbranch-no" title="branch not covered" >,private http:</span>HttpClient<span class="branch-2 cbranch-no" title="branch not covered" >) { </span>
+        const users = this.http.get('assets/data/profile.json')
+        .subscribe(<span class="fstat-no" title="function not covered" >(</span>response:Array&lt;any&gt;) =&gt; {<span class="cstat-no" title="statement not covered" >this.users= response['profile']}</span>);
+      
+    }
+    ngOnInit() {
+       
+    }
+<span class="fstat-no" title="function not covered" >    showLoginError() {</span>
+<span class="cstat-no" title="statement not covered" >        this.login1 = true;</span>
+    }
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Oct 26 2017 14:53:45 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+
+{
+  "netid": "yg45",
+  "password":"a-a-a",
+  "frontend": "https://yg-ricebook.surge.sh"
+}
+

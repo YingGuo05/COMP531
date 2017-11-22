@@ -1,0 +1,69 @@
+<div class="container">
+    <div id="profile">
+        <div class="text-center">
+            <nav>
+                <a routerLink="/main" routerLinkActive="active" class="btn btn-primary">Main</a>
+            </nav>
+            <router-outlet></router-outlet>
+            <hr>
+        </div>
+            <div class="col-sm-6">
+                    <div class="card" style="width: 20rem;">
+                            <img class="card-img-top" src={{avatarPic}} alt="http://img3.imgtn.bdimg.com/it/u=3490529943,881752914&fm=214&gp=0.jpg" width="300px" height="180px">
+                            <h5>Change Image:</h5>
+                            <input type="file" #changeAvatar capture="camera" accept="image/*" (change)="displayPhoto($event)">
+                           
+                            <!-- <input #changeAvatar id="changeAvatar" name="file" type="file" (change) = "changeAvatarPic(changeAvatar.value)"/> -->
+                            <div class="card-block">
+                              <h3 class="card-title">Current Info</h3>
+                            </div>
+                            <ul class="list-group">
+                              <li class="list-group-item">Name:{{userinfo?.name}}</li>
+                              <li class="list-group-item">DisplayName:{{userinfo?.displayname}}</li>
+                              <li id="show_email" class="list-group-item">Email:{{userinfo?.email}}</li>
+                              <li class="list-group-item">Phone:{{userinfo?.phone}}</li>
+                              <li class="list-group-item">Date of Birth:{{userinfo?.birth}}</li>
+                              <li id="show_zipcode" class="list-group-item">Zipcode:{{userinfo?.zipcode}}</li>
+                              <!-- <li class="list-group-item">Password:{{userinfo?.password}}</li> -->
+                            </ul>  
+                    </div>
+            </div>
+            <div id="pro" class="fomr-group col-sm-6">
+                    <form (ngSubmit)="onSubmit(profile)" #profile="ngForm" >
+                            
+                                <h2>Update Info</h2>
+                                <p>DisplayName: </p>
+                                <input type="text" name="displayname" placeholder="DisplayName" ngModel #displayname="ngModel" pattern="^([a-zA-Z]{1})([a-zA-Z0-9])*$" class="form-control" />
+                                <span class="remind-info" *ngIf="change.namechange">Name is changed to : {{userinfo.displayname}}. </span>
+                                <span class="remind-info" *ngIf="!displayname.valid && displayname.touched ">Input displayname is not in correct format.</span>
+                                <p>Email Address: </p>
+                                <input id="email" type="text" name="email" placeholder="Email address" ngModel pattern="^([a-zA-Z0-9\_\-\.])+@([a-zA-Z0-9\_\-])+((\.[a-zA-Z0-9]{2,4}){1,2})$" #email="ngModel" class="form-control"/>
+                                <span class="remind-info" *ngIf="change.emailchange">Email is changed to : {{userinfo.email}}.</span>
+                                <span class="remind-info" *ngIf="!email.valid && email.touched">Email is not in correct format.</span>
+                                <p>Phone Number: </p>
+                                <input type="text" name="phone" placeholder="123-123-1234" ngModel pattern="^\(?([0-9]{3})\)?[-]?([0-9]{3})[-]?([0-9]{4})$" #phone="ngModel" class="form-control" />
+                                <span class="remind-info" *ngIf="change.phonechange">Phone Number is changed to : {{userinfo.phone}}.</span>
+                                <span class="remind-info" *ngIf="!phone.valid && phone.touched">Phone Number should be in format as ddd-ddd-dddd.</span>
+                                <p> Zipcode: </p>
+                                <input id="zipcode" type="text" name="zipcode" placeholder="12345" ngModel  pattern="^([0-9]{5})$" #zipcode="ngModel" class="form-control"/>
+                                <span class="remind-info" *ngIf="!zipcode.valid && zipcode.touched">Zipcode shoud be 5 digit numbers.</span>
+                                <span class="remind-info" *ngIf="change.zipcodechange">Zipcode is changed to :{{userinfo.zipcode}}.</span>
+                                <p>Password: </p>
+                                <input id="password" type="password" name="password" placeholder="Enter Password" ngModel #password="ngModel" class="form-control" pattern="^([a-zA-Z0-9]+\-)([a-zA-Z0-9]+\-)([a-zA-Z0-9]+)$"/>
+                                <span class="remind-info" *ngIf="!password.valid && password.touched">The password should be three-word-passphrase.
+                                        You can use a-z, A-Z and 0-9 concatenated by "-".</span>
+                                <p>Password Confirmation: </p>
+                                <input type="password" name="passwordConfirm" placeholder="Enter Again"  ngModel #passwordConfirm="ngModel" class="form-control"/>
+                                <span class="remind-info" *ngIf="pw">Password is not equal to password confirmation.</span>
+                                <span class="remind-info" *ngIf="change.passwordchange">Password is changed to :{{userinfo.password}}.</span>
+                                <br/>
+                                <br/>
+                                <span class="remind-info" id="noupdate">{{change.noupdate}}</span>
+                                <button id= "changebtn" type="submit" class="btn btn-primary">Submit</button>
+                                <button type="reset"  class="btn btn-primary">Reset</button>
+                            
+                        </form>
+            </div>
+            
+    </div>
+</div>

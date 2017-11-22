@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app/profile/profile.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/app/profile</a> profile.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">45.28% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>24/53</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">19.44% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>7/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">40.82% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>20/49</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnInit,ViewChild } from '@angular/core';
+import { ProfileService } from './profile.service';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
+import { NgForm } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import { ShareService } from '../share.service';
+import { HttpClientModule } from '@angular/common/http';
+@Component({
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css'],
+  providers:[]
+})
+export class ProfileComponent implements OnInit {
+    //@ViewChild('profile') profileForm:NgForm;
+    userinfo;
+    //use these to mark each info updates or not
+    namechange=false;
+    emailchange=false;
+    phonechange=false;
+    zipcodechange=false;
+    passwordchange=false;
+    pw=false;
+    info;
+&nbsp;
+  constructor(private share :ShareService<span class="branch-1 cbranch-no" title="branch not covered" > ,private http:</span>HttpClient<span class="branch-2 cbranch-no" title="branch not covered" >) { </span>
+     this.fetchInfo();
+  }
+  fetchInfo(){
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(this.share.state() == "login"){
+        //get user info from landing page via service
+<span class="cstat-no" title="statement not covered" >        this.userinfo = this.share.initiate();</span>
+    }else{
+        const articles = this.http.get('assets/data/profile.json')
+        .subscribe(<span class="fstat-no" title="function not covered" >response =&gt; </span>
+          {<span class="cstat-no" title="statement not covered" >this.userinfo= response['profile'][0]</span>
+        });
+    } 
+    
+  }
+  
+<span class="fstat-no" title="function not covered" >  onSubmit(</span>profile:NgForm){
+      //check every info updates or not and display the remind info
+<span class="cstat-no" title="statement not covered" >      if(profile.value.password == profile.value.passwordConfirm &amp;&amp; profile.valid){</span>
+<span class="cstat-no" title="statement not covered" >        if(this.userinfo.name != profile.value.name &amp;&amp; profile.value.name ){</span>
+<span class="cstat-no" title="statement not covered" >            this.userinfo.name = profile.value.name;</span>
+<span class="cstat-no" title="statement not covered" >            this.namechange= true;</span>
+        }else{
+<span class="cstat-no" title="statement not covered" >            this.namechange= false;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if(this.userinfo.email != profile.value.email &amp;&amp; profile.value.email){</span>
+<span class="cstat-no" title="statement not covered" >            this.userinfo.email = profile.value.email;</span>
+<span class="cstat-no" title="statement not covered" >            this.emailchange = true;</span>
+        }
+        else{
+<span class="cstat-no" title="statement not covered" >            this.emailchange = false;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if(this.userinfo.phone != profile.value.phone &amp;&amp; profile.value.phone){</span>
+<span class="cstat-no" title="statement not covered" >            this.userinfo.phone = profile.value.phone;</span>
+<span class="cstat-no" title="statement not covered" >            this.phonechange = true;</span>
+        }else{
+<span class="cstat-no" title="statement not covered" >            this.phonechange = false;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if(this.userinfo.zipcode != profile.value.zipcode &amp;&amp; profile.value.zipcode){</span>
+<span class="cstat-no" title="statement not covered" >            this.userinfo.zipcode = profile.value.zipcode;</span>
+<span class="cstat-no" title="statement not covered" >            this.zipcodechange = true;</span>
+        }else{
+<span class="cstat-no" title="statement not covered" >            this.zipcodechange = false;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if(this.userinfo.password != profile.value.password &amp;&amp; profile.value.password){</span>
+<span class="cstat-no" title="statement not covered" >            this.userinfo.password = profile.value.password;</span>
+<span class="cstat-no" title="statement not covered" >            this.passwordchange=true;</span>
+        }else{
+<span class="cstat-no" title="statement not covered" >            this.passwordchange = false;</span>
+<span class="cstat-no" title="statement not covered" >            this.pw = false;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        this.share.send_info(this.userinfo);</span>
+<span class="cstat-no" title="statement not covered" >        profile.reset();</span>
+      }else <span class="cstat-no" title="statement not covered" >if(profile.value.password != profile.value.passwordConfirm){</span>
+<span class="cstat-no" title="statement not covered" >            this.pw = true;</span>
+<span class="cstat-no" title="statement not covered" >            profile.reset();</span>
+      }
+  }
+//   reset(){
+//     this.profileForm.reset();
+//   }
+  ngOnInit(){
+  }
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Oct 26 2017 14:53:45 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
