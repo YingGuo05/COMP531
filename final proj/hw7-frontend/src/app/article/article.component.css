@@ -1,0 +1,17 @@
+.post{
+    border: 10px solid cornsilk;
+    padding:20px;
+    border-radius: 30px;
+}
+
+/* .comment-area{
+    display: none;
+} */
+.comment{
+    border: 5px solid cornsilk;
+    padding:10px;
+    border-radius: 30px;
+}
+.comment_area{
+    display: none
+}

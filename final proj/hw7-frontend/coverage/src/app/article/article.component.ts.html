@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app/article/article.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/app/article</a> article.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">46.91% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>38/81</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>16/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">21.43% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">44% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>33/75</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnInit } from '@angular/core';
+import { HttpClient,HttpClientModule } from '@angular/common/http';
+import { ShareService } from '../share.service'
+import { NewArticleService } from './new-article.service';
+import { ArticlesService } from './articles.service';
+import { Http} from '@angular/http';
+import 'rxjs/add/operator/toPromise';
+import { resource } from '../../profileActions'
+@Component({
+  selector: 'app-article',
+  templateUrl: './article.component.html',
+  styleUrls: ['./article.component.css'],
+  providers:[NewArticleService,ArticlesService]
+})
+export class ArticleComponent implements OnInit {
+&nbsp;
+  userlist:any;
+  name:string;
+  status:string='';
+  followers:Array&lt;any&gt;=[];
+  follower:string='';
+  headline='';
+  search;
+  article:Array&lt;any&gt; = [];
+  find:boolean = false;
+  remind:string="";
+  btn="Display comments";
+  display = false;
+  newPost;
+  public articles:Array&lt;any&gt;=[];
+  constructor(private http:HttpClient<span class="branch-1 cbranch-no" title="branch not covered" >,private share:</span>ShareService<span class="branch-2 cbranch-no" title="branch not covered" ></span>
+    ,private newarticle:NewArticleService<span class="branch-2 cbranch-no" title="branch not covered" >,private articleSer: </span>ArticlesService<span class="branch-2 cbranch-no" title="branch not covered" >) { </span>
+    
+}
+  ngOnInit() {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(this.share.state() == "login"){
+<span class="cstat-no" title="statement not covered" >      this.name = this.share.initiate().name;</span>
+<span class="cstat-no" title="statement not covered" >      this.articles = this.share.initiate().articles;</span>
+<span class="cstat-no" title="statement not covered" >      this.fetchArticles();</span>
+<span class="cstat-no" title="statement not covered" >      console.log(this.article.length);</span>
+    }  
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(this.share.state() == "login"){
+<span class="cstat-no" title="statement not covered" >      this.headline = this.share.initiate().headline;</span>
+    }
+    
+  const followers = this.http.get('assets/data/followers.json').subscribe(
+<span class="fstat-no" title="function not covered" >      response =&gt; {<span class="cstat-no" title="statement not covered" >this.followers = response['followers']}</span>);</span>
+  const userlist = this.http.get('assets/data/profile.json')
+      .subscribe(<span class="fstat-no" title="function not covered" >response =&gt; {<span class="cstat-no" title="statement not covered" >this.userlist = response['profile']}</span>);</span>
+  }
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  fetchArticles(){</span></span>
+    const articles = <span class="cstat-no" title="statement not covered" >this.http.get('assets/data/articles.json')</span>
+    .subscribe(<span class="fstat-no" title="function not covered" >response =&gt; </span>
+      {<span class="cstat-no" title="statement not covered" >this.article = response['articles']</span>
+<span class="cstat-no" title="statement not covered" >      this.article.push(...this.articles),</span>
+      
+      this.article = this.article.reverse()
+    });
+  }
+<span class="fstat-no" title="function not covered" >  addPost(){</span>
+<span class="cstat-no" title="statement not covered" >    if(this.newPost){//create new article</span>
+<span class="cstat-no" title="statement not covered" >      this.article = this.newarticle.addNewArticle(this.name,this.article,this.newPost);</span>
+<span class="cstat-no" title="statement not covered" >      console.log(this.article);</span>
+<span class="cstat-no" title="statement not covered" >      this.share.set_article(this.newarticle.createNew(this.name,this.newPost));</span>
+<span class="cstat-no" title="statement not covered" >      this.newPost='';</span>
+    }  
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  add(){//follow someone</span>
+<span class="cstat-no" title="statement not covered" >    for(var i = 0 ; i &lt; this.userlist.length;i++){</span>
+<span class="cstat-no" title="statement not covered" >        if(this.userlist[i].name == this.follower){</span>
+<span class="cstat-no" title="statement not covered" >            this.followers.push({name:this.follower,status:this.userlist[i],img:'assets/images/pic3.jpg',display:true});</span>
+<span class="cstat-no" title="statement not covered" >            this.article = this.article.reverse();</span>
+<span class="cstat-no" title="statement not covered" >            this.article.push(...this.userlist[i].articles);</span>
+<span class="cstat-no" title="statement not covered" >            this.article = this.article.reverse();</span>
+<span class="cstat-no" title="statement not covered" >            this.find = true;</span>
+<span class="cstat-no" title="statement not covered" >            this.remind = "";</span>
+        }
+    }
+<span class="cstat-no" title="statement not covered" >    if(!this.find){</span>
+<span class="cstat-no" title="statement not covered" >        this.remind ="The user is not existed."</span>
+    }
+<span class="cstat-no" title="statement not covered" >    this.follower = "";</span>
+<span class="cstat-no" title="statement not covered" >    this.find = false;</span>
+  }
+<span class="fstat-no" title="function not covered" >  clear(){</span>
+<span class="cstat-no" title="statement not covered" >    this.newPost='';</span>
+  }
+  //search the matched post and display them on main page
+<span class="fstat-no" title="function not covered" >  filter(</span>event:any){
+    
+<span class="cstat-no" title="statement not covered" >    this.article = this.articleSer.filter(this.article,event.target.value);</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  toggle(</span>id){
+    let comment = <span class="cstat-no" title="statement not covered" >document.getElementById(id);</span>
+<span class="cstat-no" title="statement not covered" >    if(comment.style.display=='none'){</span>
+<span class="cstat-no" title="statement not covered" >      comment.style.display = 'block';</span>
+<span class="cstat-no" title="statement not covered" >      this.btn="Close comments";</span>
+    }else{
+<span class="cstat-no" title="statement not covered" >      comment.style.display = 'none';</span>
+<span class="cstat-no" title="statement not covered" >      this.btn="Display comments";</span>
+    }
+  }
+<span class="fstat-no" title="function not covered" >  delete(</span>f:any){//unfollow someone
+<span class="cstat-no" title="statement not covered" >    for(var i = 0;i &lt; this.followers.length ; i++){</span>
+<span class="cstat-no" title="statement not covered" >      if(this.followers[i].name == f)</span>
+<span class="cstat-no" title="statement not covered" >        this.followers.splice(i,1);</span>
+    }
+<span class="cstat-no" title="statement not covered" >    this.article = this.articleSer.deleteArticle(this.article,f);</span>
+  }
+<span class="fstat-no" title="function not covered" >  changeStatus(){// change current headline</span>
+<span class="cstat-no" title="statement not covered" >    this.headline = this.status;</span>
+<span class="cstat-no" title="statement not covered" >    this.status = '';</span>
+<span class="cstat-no" title="statement not covered" >    this.share.set_headline(this.headline);</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Oct 26 2017 14:53:45 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
